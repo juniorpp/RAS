@@ -21,7 +21,13 @@
           </tr>
           <tr>
             <td width="150" align="right" bgcolor="#FFFF66">Teacher ::</td>
-            <td bgcolor="#FFFFCC"><input type="text" name="teacher" id="teacher" /></td>
+            <td bgcolor="#FFFFCC"><select name="teacher" id="teacher">
+          <option value=""></option>        
+          {% for row in name %}
+          <option value="{{ row[0] }}">{{ row[0] }}</option>
+          {% endfor %}
+          
+        </select></td>
           </tr>
           <tr>
             <td width="150" align="right" bgcolor="#FFFF66">Capacity ::</td>
